@@ -215,9 +215,9 @@ export class TaskController {
       const task = tasks.find(t => t.id === id);
       
       if (task) {
-          // Ensure task.history is an array
+          
           if (!Array.isArray(task.history)) {
-              task.history = []; // Initialize history if it is not already an array
+              task.history = []; 
           }
           
           task.history.push({
@@ -298,7 +298,7 @@ export class TaskController {
         res.end(JSON.stringify({ message: 'No completed tasks to delete' }));
       }
     }
-    // Default response for unhandled routes
+    
     else {
       res.writeHead(404, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ message: 'Route not found' }));
