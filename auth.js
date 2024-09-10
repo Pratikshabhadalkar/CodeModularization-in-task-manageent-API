@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 
-const secret_key = 'your_secret_key';
+
 
 export function handleAuthentication(req, res, callback) {
 
